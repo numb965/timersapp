@@ -1,7 +1,10 @@
-- pipeline: "deploy2"
-  on: "EVENT"
-  events:
-  - type: "PUSH"
-    refs:
-    - "refs/heads/main"
-  priority: "NORMAL"
+  - action: "Upload files to 172.32.0.2"
+    type: "SFTP"
+    input_type: "SCM_REPOSITORY"
+    local_path: "$timersapp"
+    remote_path: "study/"
+    login: "root"
+    password: "secure!wxrWvyiJrdkXZFyLs4RY+g==.hVC1GPDKVLvDEN1jfkU3tw=="
+    host: "172.32.0.2"
+    port: "24"
+    authentication_mode: "PASS"
