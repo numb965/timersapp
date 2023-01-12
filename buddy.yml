@@ -1,9 +1,14 @@
-  - action: "Transfer files to a sandbox: "
-    type: "DEPLOY_TO_SANDBOX"
-    input_type: "SCM_REPOSITORY"
-    local_path: "numb965/timersapp"
-    remote_path: "/study"
-    user: "root"
-    sandbox_references:
-    - "BY_ID"
-    sandbox_id: "fwr0mz7rpcc6m"
+  - action: "Execute npm test"
+    type: "BUILD"
+    main_service_name: "Main"
+    docker_image_name: "library/node"
+    docker_image_tag: "18"
+    execute_commands:
+    - "# yarn install"
+    - "npm install"
+    - "npm test"
+    volume_mappings:
+    - "/:/buddy/timersapp"
+    cache_base_image: true
+    shell: "BASH"
+  
