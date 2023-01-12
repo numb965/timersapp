@@ -1,12 +1,12 @@
-action: "Execute npm test"
+- action: "Execute npm run test"
     type: "BUILD"
     main_service_name: "Main"
     docker_image_name: "library/node"
     docker_image_tag: "18"
     execute_commands:
     - "# yarn install"
-    - "npm install"
-    - "npm test"
+    - "npm run install"
+    - "npm run test"
     volume_mappings:
     - "/:/buddy/timersapp"
     ignore_errors: true

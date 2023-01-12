@@ -1,2 +1,3 @@
 MONGODB_URI = "mongodb+srv://numb965:utJHa9jFHpnthkz7@cluster0.38dcnxq.mongodb.net/https://data.mongodb-api.com/app/data-wbjko/endpoint/data/v1/timerusers"
 MONGODB = "timerusers"
+buddy_id = Yml8rVoJX7ax7Dv9eyv4Ek36WG
