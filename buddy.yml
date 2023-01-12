@@ -1,4 +1,4 @@
-- action: "Execute npm install"
+action: "Execute npm test"
     type: "BUILD"
     main_service_name: "Main"
     docker_image_name: "library/node"
