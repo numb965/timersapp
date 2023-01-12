@@ -1,14 +1,8 @@
-  - action: "Execute npm test"
-    type: "BUILD"
-    main_service_name: "Main"
-    docker_image_name: "library/node"
-    docker_image_tag: "18"
-    execute_commands:
-    - "# yarn install"
-    - "npm install"
-    - "npm test"
-    volume_mappings:
-    - "/:/buddy/timersapp"
-    cache_base_image: true
-    shell: "BASH"
-  
+- pipeline: "deploy2"
+  on: "EVENT"
+  events:
+  - type: "PUSH"
+    refs:
+    - "refs/heads/main"
+  priority: "NORMAL"
+  fail_on_prepare_env_warning: true
