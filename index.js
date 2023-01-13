@@ -77,7 +77,7 @@ server.on('upgrade', (request, socket, head)=>{
   })
 })
 
-server.listen(80, 'study.buddy.internal',() => {
+server.listen(80, '172.32.0.2',() => {
   console.log(`  Listening on http://localhost:${port}`);
 });
 
